@@ -2,26 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 body {
+  overflow: hidden;
   background-color: hsl(225, 100%, 94%);
   display: flex;
   flex-direction: column;
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-}
-
-.background-pattern {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
+  color: hsl(224, 23%, 55%);
   background-image: url(./images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
-  background-position: center -10%;
-  z-index: -1;
+  background-size: contain;
+  background-position: 0 -75px;
 }
 
 .card-container {
@@ -34,13 +27,129 @@ body {
 .order-summary {
   display: flex;
   flex-direction: column;
-  background-color: hsl(225, 100%, 98%);
-  width: 300px;
-  border-radius: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 390px;
+  border-radius: 1rem;
+}
+
+h1 {
+  color: hsl(223, 47%, 23%);
+  font-size: 25px;
+  font-weight: 900;
 }
 
 .main-img {
   width: 100%;
   padding-bottom: 15px;
+  margin-bottom: 15px;
   border-radius: 0.8rem;
+}
+
+.description {
+  display: flex;
+  text-align: center;
+  padding: 15px 40px 15px 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 45px 0px 45px;
+}
+.icon-melody {
+  height: 85%;
+}
+.plan {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0.7rem;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.plan-details {
+  display: flex;
+  gap: 17px;
+}
+.plan-price {
+  display: flex;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  line-height: 1.7;
+}
+.button-change-plan {
+  display: flex;
+}
+.button-change {
+  display: flex;
+  align-items: center;
+  color: hsl(245, 75%, 52%);
+  font-size: 12px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.button-proceed {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 13px;
+  color: white;
+  background-color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  border-radius: 0.7rem;
+  font-size: 13px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+  margin-bottom: 10px;
+  box-shadow: 0px 15px 15px hsla(245, 62%, 59%, 0.345);
+}
+
+.button-cancel {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  font-size: 13px;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.button-change:hover {
+  opacity: 0.7;
+}
+.button-proceed:hover {
+  opacity: 0.7;
+}
+.button-cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 430px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 -13px;
+  }
+  .card-container {
+    padding: 30px;
+  }
+  .actions-container {
+    padding: 0 25px 0px 25px;
+  }
+  .button-cancel {
+    margin-bottom: 13px;
+  }
 }
