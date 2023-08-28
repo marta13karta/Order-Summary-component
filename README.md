@@ -1,3 +1,5 @@
+LIVE --- https://marta13karta.github.io/Order-Summary-component/
+
 # Frontend Mentor - Order summary card
 
 ![Design preview for the Order summary card coding challenge](./design/desktop-preview.jpg)
